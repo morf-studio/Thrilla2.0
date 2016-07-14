@@ -143,7 +143,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-		
+
 
 	</div><!-- the-content -->
 

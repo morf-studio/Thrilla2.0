@@ -92,11 +92,44 @@ function thrilla2_0_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'thrilla2-0' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'thrilla2_0_widgets_init' );
+
+// Create any new image sizes
+//add_image_size('largest', 3000, 9999);
+
+function add_image_sizes() {
+  if( function_exists( 'add_image_size' )) {
+    add_image_size( 'thumbnail-retina', 600, 338 );
+    add_image_size( 'small', 750 );
+    add_image_size( 'xlarge', 1500 );
+    add_image_size( 'xxlarge', 2000 );
+    add_image_size( 'featured', 1200, 600 );
+    add_image_size( 'xlfeatured', 2400, 1200 );
+  }
+}
+add_action('after_setup_theme', 'add_image_sizes');
+
+function add_image_choices( $sizes ) {
+  return array_merge( $sizes, array(
+    'thumbnail-retina' => __( 'Thumbnail Retina' ),
+    'small' => __( 'Small' ),
+    'xlarge' => __( 'X Large' ),
+    'xxlarge' => __( 'XX Large' ),
+    'featured' => __( 'Featured' ),
+    'xlfeatured' => __( 'XL Featured' ),
+  ) );
+}
+add_filter( 'image_size_names_choose', 'add_image_choices' );
+
+function custom_theme_setup() {
+    add_theme_support( 'advanced-image-compression' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
+
 
 /**
  * Enqueue scripts and styles.
@@ -104,7 +137,7 @@ add_action( 'widgets_init', 'thrilla2_0_widgets_init' );
 function thrilla2_0_scripts() {
 	wp_enqueue_style( 'thrilla2-0-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'thrilla2-0-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	//wp_enqueue_script( 'thrilla2-0-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'thrilla2-0-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
