@@ -24,3 +24,24 @@ input[type="submit"] {
 		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 	}
 }
+
+button{
+  background-color:none;
+  border:none;
+  font-weight:600;
+  font-size:$h5;
+}
+
+.btn-circle{
+  display:block;
+  margin:auto;
+  border-radius:50%;
+  height:6rem;
+  width:6rem;
+  padding:1rem;
+}
+
+.button-text {
+  display: block;
+  padding: 5.5rem 0;
+}

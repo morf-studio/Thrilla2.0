@@ -10,9 +10,54 @@
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object,
+img {
 	max-width: 100%;
 }
+
+/**
+ * Images
+ */
+img {
+		height: auto; /* Make sure images are scaled correctly. */
+    vertical-align: middle;
+}
+.fit{
+  width:100%;
+}
+
+/*
+ * Media Element
+ */
+
+/* ====== media ====== */
+.media { margin:$space-s}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: $space-s;}
+.media .img img{display:block;}
+
+
+
+/**
+ * Figures
+ */
+
+figcaption {
+    font-size: $small-font-size;
+}
+// CSS Tricks Fluid-Width-Video, Using .ratio-x-y Classes to Calculate proportion
+.videoWrapper {
+	position: relative;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 
 /*--------------------------------------------------------------
 ## Captions

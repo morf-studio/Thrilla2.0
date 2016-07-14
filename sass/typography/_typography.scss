@@ -9,6 +9,72 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+.measure{
+  max-width:$measure-width;
+	&--narrow{
+	  max-width:$measure-width-narrow;
+	}
+}
+
+.leading{
+	&--solid { line-height: $leading-solid }
+	&--headline { line-height: $leading-headline }
+	&--text { line-height: $leading-text }
+}
+/* Basscss Typography */
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+strong { font-weight: $bold-font-weight}
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    {
+	text-transform: uppercase;
+	&--tracked { letter-spacing: $caps-letter-spacing;}
+}
+.bold {font-weight:bold;}
+.text-left   { text-align: left }
+.text-center { text-align: center }
+.text-right  { text-align: right }
+.text-justify{ text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure, small,
+%vertical-rhythm {
+    margin-top:0;
+    margin-bottom: $space-after;
+}
+
+small{
+  font-size:0.875rem;
+  display:block;
+  line-height:1.5rem;
+  margin-top:0.125rem;
+}
+
+@import
+"headings",
+"lists"
+;
+
 @import "headings";
 
 @import "copy";
