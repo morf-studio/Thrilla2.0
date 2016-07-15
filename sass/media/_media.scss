@@ -14,6 +14,9 @@ object,
 img {
 	max-width: 100%;
 }
+.fluid-width-video-wrapper{
+	margin-bottom:$space-after;
+}
 
 /**
  * Images
@@ -26,13 +29,20 @@ img {
   width:100%;
 }
 figure{
+	max-width:100%;
+	// Pulled out of Normalize - Must include all values
+	margin:$space-before auto $space-after;
 	img{
 		max-height: 90vh;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
 	}
 }
 figcaption, .wp-caption-text{
 	font-size:$h5;
 	text-align: center;
+	padding:$space-l;
 }
 
 /*
@@ -40,7 +50,7 @@ figcaption, .wp-caption-text{
  */
 
 /* ====== media ====== */
-.media { margin:$space-s}
+.media { margin-bottom:$space-s}
 .media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
 .media .img {float:left; margin-right: $space-s;}
 .media .img img{display:block;}

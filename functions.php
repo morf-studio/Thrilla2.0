@@ -92,8 +92,8 @@ function thrilla2_0_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'thrilla2-0' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title caps">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'thrilla2_0_widgets_init' );
@@ -138,14 +138,43 @@ function thrilla2_0_scripts() {
 	wp_enqueue_style( 'thrilla2-0-style', get_stylesheet_uri() );
 
 	//wp_enqueue_script( 'thrilla2-0-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'thrilla2-0-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	//wp_enqueue_script( 'thrilla2-0-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'thrilla2-0-main-min', get_template_directory_uri() . '/js/min/main-min.js', array(), '20160715', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'thrilla2_0_scripts' );
+
+
+/************* ENQUEUE JS *************************/
+
+/* pull jquery from google's CDN. If it's not available, grab the local copy. Code from wp.tutsplus.com :-) */
+
+$url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'; // the URL to check against
+$test_url = @fopen($url,'r'); // test parameters
+if( $test_url !== false ) { // test if the URL exists
+
+    function load_external_jQuery() { // load external file
+        wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery
+        wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'); // register the external file
+        wp_enqueue_script('jquery'); // enqueue the external file
+    }
+
+    add_action('wp_enqueue_scripts', 'load_external_jQuery'); // initiate the function
+} else {
+
+    function load_local_jQuery() {
+        wp_deregister_script('jquery'); // initiate the function
+        wp_register_script('jquery', get_template_directory_uri().'/js/jquery-3.1.0.min.js', __FILE__, false, '3.1.0', true); // register the local file
+
+        wp_enqueue_script('jquery'); // enqueue the local file
+    }
+
+    add_action('wp_enqueue_scripts', 'load_local_jQuery'); // initiate the function
+}
+
 
 /**
  * Implement the Custom Header feature.

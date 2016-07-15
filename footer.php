@@ -13,8 +13,16 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<p> ©2016. </p>
+	<footer id="colophon" class="site-footer pad-m" role="contentinfo">
+
+		<!-- <div class="col col-12 m-col-6">
+			<a href="mailto:info@thrillderness.co">info@thrillderness.co</a>
+		</div>
+
+		<div class="col col-12 m-col-6">
+			©2016.
+		</div> -->
+
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

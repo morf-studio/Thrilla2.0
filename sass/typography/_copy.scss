@@ -1,13 +1,17 @@
-p {
+
+p{
 	margin-bottom: 1.5em;
+	max-width:$measure-width;
 }
+
+
 
 dfn, cite, em, i {
 	font-style: italic;
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 1.5em 0;
 }
 
 address {

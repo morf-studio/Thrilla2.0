@@ -2,7 +2,7 @@ a {
 	color: $color__link;
 	transition: all .2s;
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link;
 	}
 	&:hover,
 	&:focus,
@@ -23,9 +23,8 @@ a {
 	border-bottom-style: solid;
 	border-bottom-width: $border-width;
 }
-.link, %td-none{
-	text-decoration:none;
-}
+
+
 .permalink{
 	@extend %td-none;
 	.title{
@@ -42,6 +41,7 @@ a {
 	@extend %bold;
 }
 
+
 a.button{
   text-decoration:none;
   padding:$space-s $space-m;
@@ -54,4 +54,30 @@ a.button{
   &:active{
 
   }
+}
+
+.link, %td-none{
+	text-decoration:none;
+	&--white{
+		color:$white80;
+		&:visited{
+			color:$white80;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $white;
+		}
+	}
+	&--black{
+		color:$black80;
+		&:visited{
+			color:$black80;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $black;
+		}
+	}
 }

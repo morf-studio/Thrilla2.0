@@ -10,3 +10,33 @@
 	margin:0 auto;
 	width:12em;
 }
+
+// Single Posts Type Scaling
+.the-content{
+	aside{
+		margin-bottom:$space-after;
+		margin-left:$space-l;
+		padding:$space-l;
+		float:right;
+		max-width:$measure-width-narrow;
+		color:$black60;
+		border:.25rem solid;
+		@include breakpoint(m) {
+			line-height:1.6875;
+		}
+		@include breakpoint(xl) {
+			line-height:1.825;
+			padding:1.875rem;
+		}
+	}
+}
+.main-content{
+	p {
+		@include breakpoint(m) {
+			font-size:1.125rem;
+		}
+		@include breakpoint(xl) {
+			font-size:1.25rem;
+		}
+	}
+}

@@ -31,7 +31,7 @@ strong { font-weight: $bold-font-weight}
 .italic  { font-style: italic }
 .caps, %caps{
 	text-transform: uppercase;
-	&--tracked { letter-spacing: $caps-letter-spacing;}
+  letter-spacing: $caps-letter-spacing;
 }
 .bold, %bold {font-weight:bold;}
 .text-left   { text-align: left }

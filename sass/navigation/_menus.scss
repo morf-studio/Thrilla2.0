@@ -1,8 +1,5 @@
 .main-navigation {
-	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
 
 	ul {
 		display: none;
@@ -31,7 +28,7 @@
 			}
 
 			a {
-				width: 200px;
+
 			}
 
 			:hover > a,
@@ -61,6 +58,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+		padding:$space-m $space-m;
+		color:$black;
 	}
 
 	.current_page_item > a,
@@ -69,6 +68,12 @@
 	.current-menu-ancestor > a {
 	}
 }
+.site-branding{
+	a{
+		color:$black;
+	}
+}
+
 
 /* Small menu. */
 .menu-toggle,
@@ -103,5 +108,13 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+.tags{
+	a{
+		display:inline-block;
+		padding:$space-s $space-m;
+		margin:$space-s;
+		@extend %td-none;
 	}
 }

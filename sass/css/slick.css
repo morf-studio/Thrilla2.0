@@ -1,0 +1,68 @@
+/*
+Error: Undefined variable: "$spacing-unit".
+        on line 230 of /Users/Alex/Box Sync/Sites/Thrillderness_WP/wp-content/themes/Thrilla2.0/sass/modules/slick.scss
+
+225:     position: absolute;
+226:     bottom: 0;
+227:     list-style: none;
+228:     display: block;
+229:     text-align: center;
+230:     padding:$spacing-unit/2 0;
+231:     margin:0;
+232:     width: 100%;
+233:     li {
+234:         position: relative;
+235:         display: inline-block;
+
+Backtrace:
+/Users/Alex/Box Sync/Sites/Thrillderness_WP/wp-content/themes/Thrilla2.0/sass/modules/slick.scss:230
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/operation.rb:64:in `_perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:63:in `map'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:423:in `run'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$spacing-unit\".\A         on line 230 of /Users/Alex/Box Sync/Sites/Thrillderness_WP/wp-content/themes/Thrilla2.0/sass/modules/slick.scss\A \A 225:     position: absolute;\A 226:     bottom: 0;\A 227:     list-style: none;\A 228:     display: block;\A 229:     text-align: center;\A 230:     padding:$spacing-unit/2 0;\A 231:     margin:0;\A 232:     width: 100%;\A 233:     li {\A 234:         position: relative;\A 235:         display: inline-block;"; }

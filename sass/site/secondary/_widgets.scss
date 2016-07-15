@@ -5,3 +5,13 @@
 		max-width: 100%;
 	}
 }
+.widget_categories{
+	ul{
+		@extend %list-reset;
+	}
+}
+.cat-item{
+	a{
+		@extend %td-none;
+	}
+}

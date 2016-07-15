@@ -14,58 +14,61 @@
 
 get_header(); ?>
 
-<section class="col col-12 m-col-8 l-col-9">
+<section class="col col-12 m-col-8 l-col-9 pad-m">
 	<?php query_posts(array( 'post__in' => get_option( 'sticky_posts' ) ) ); ?>
 
 		<?php if (have_posts()): ?>
-		<header class="index hero slider cf">
+		<header class="index hero cf">
+			<div class="absolute top-0 left-0 z1 pad-y-s pad-x-m bg-black">
+				<span class="caps h5">Features</span>
+			</div>
+			<div class="slider">
+					<?php while (have_posts()) : the_post(); ?>
+					<div>
+						<div class="slide">
 
-			<?php while (have_posts()) : the_post(); ?>
-			<div>
-				<div class="slide">
-
-					<?php if ( has_post_thumbnail() ): ?>
-							<?php
-								$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured');
-								$img_id = get_post_thumbnail_id( $post_id );
-								$alt_text = get_post_meta($post->ID, '_wp_attachment_image_alt', true);
-						?>
-
-						<div class="featured-image-hero">
-							<div class="featured-image-layout">
-								<a class="permalink" href="<?php the_permalink(); // Get the link to this post ?>">
-										<img src="<?php echo $featured_image[0]; ?>" alt="<?php echo $alt_text; ?>" >
-								</a>
-							</div>
-						</div>
-
-					<?php endif; ?>
-
-
-					<div class="header-content">
-							<div class="header-content-inner">
-								<h6>
-									<?php $category = get_the_category();
-								if($category[0]){
-								echo '<a class="category-link" href="'.get_category_link($category[0]->term_id ).'">
-
-									'.$category[0]->cat_name.'
-								</a>';
-								}
+							<?php if ( has_post_thumbnail() ): ?>
+									<?php
+										$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured');
+										$img_id = get_post_thumbnail_id( $post_id );
+										$alt_text = get_post_meta($post->ID, '_wp_attachment_image_alt', true);
 								?>
-								</h6>
-							<h1 class="title">
-								<a class="permalink" href="<?php the_permalink(); // Get the link to this post ?>">
-								<?php the_title(); // Show the title of the posts as a link ?>
-								</a>
-							</h1>
+
+								<div class="featured-image-hero">
+									<div class="featured-image-layout">
+										<a class="permalink" href="<?php the_permalink(); // Get the link to this post ?>">
+												<img src="<?php echo $featured_image[0]; ?>" alt="<?php echo $alt_text; ?>" >
+										</a>
+									</div>
+								</div>
+
+							<?php endif; ?>
+
+
+							<div class="header-content absolute top-0 left-0 bottom-0 right-0 flex">
+									<div class="header-content-inner mar-y-auto mar-x-auto text-center pad-l">
+										<h6>
+											<?php $category = get_the_category();
+										if($category[0]){
+										echo '<a class="category-link link--white border pad-y-s pad-x-m bg-black" href="'.get_category_link($category[0]->term_id ).'">
+
+											'.$category[0]->cat_name.'
+										</a>';
+										}
+										?>
+										</h6>
+									<h1 class="title">
+										<a class="permalink link--white" href="<?php the_permalink(); // Get the link to this post ?>">
+											<?php the_title(); // Show the title of the posts as a link ?>
+										</a>
+									</h1>
+								</div>
+							</div>
+
 						</div>
 					</div>
-
-				</div>
+				<?php endwhile; ?>
 			</div>
-		<?php endwhile; ?>
-
 	</header>
 	<?php endif; ?>
 
@@ -101,7 +104,7 @@ get_header(); ?>
 
 </section>
 
-<section class="col col-12 m-col-4 l-col-3">
+<section class="col col-12 m-col-4 l-col-3 pad-m">
 	<?php get_sidebar(); ?>
 </section>
 

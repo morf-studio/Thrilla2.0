@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="hero">
+	<header class="hero relative bg-black">
 		<?php if ( has_post_thumbnail() ): ?>
 
 				<?php
@@ -28,121 +28,131 @@
 
 		<?php endif; ?>
 
-		<div class="header-content">
+		<div class="header-content absolute top-0 left-0 bottom-0 right-0 pad-l text-center">
 			<?php
 			$category = get_the_category();
 			if($category[0]){
-			echo '<a class="category-link" href="'.get_category_link($category[0]->term_id ).'">
+			echo '<a class="category-link link-white" href="'.get_category_link($category[0]->term_id ).'">
 
 				'.$category[0]->cat_name.'
 			</a>';
 			}
 			?>
-			<h1 class="title"><?php the_title(); // Display the title of the post ?></h1>
+			<h1 class="title white"><?php the_title(); // Display the title of the post ?></h1>
 
 			<?php if(get_field('the_subtitle')): ?>
-				<h2 class="subtitle"> <?php the_field('the_subtitle'); ?>	</h2>
+				<h2 class="subtitle white"> <?php the_field('the_subtitle'); ?>	</h2>
 			<?php endif; ?>
 
-			<h6 id="date"> <?php the_time('M.d.Y') ?> </h6>
-			<nav id="post-header-tags" class="tags">
-				<?php echo get_the_tag_list(); // Display the tags this post has, as links separated by spaces and hashtags ?>
-			</nav>
+			<h6 id="date" class=""> <?php the_time('d.M.Y') ?> </h6>
+
 		</div>
+
+		<nav id="post-header-tags" class="tags">
+			<?php echo get_the_tag_list('#', '#'); // Display the tags this post has, as links separated by spaces and hashtags ?>
+		</nav>
+
 	</header>
 
-	<div class="the-content">
+
+
+	<div class="the-content pad-m bg-white cf">
 
 		<?php if(get_field('front_matter')): ?>
-			<div class="front-matter">
+
+			<div class="front-matter col col-12 xl-col-3 pad-m">
 				<?php the_field('front_matter'); ?>
+
+				<?php if(get_field('distance')): ?>
+					<span class="data">
+						<span class="th">
+							Distance
+						</span>
+						<span>
+							<?php the_field('distance'); ?>	mi /
+						</span>
+						<span>
+						<?
+							$mile_kilometer_conversion = 1.6;
+							$standard_distance =  get_field('distance');
+							$metricDistance = $mile_kilometer_conversion*$standard_distance ;
+							print ($metricDistance);
+						?> km
+						</span>
+					</span>
+				<?php endif; ?>
+
+				<?php if(get_field('duration')): ?>
+					<span class="data">
+						<span class="th">Duration</span>
+						<span><?php the_field('duration'); ?></span>
+					</span>
+				<?php endif; ?>
+
+				<?php if(get_field('ascent')): ?>
+					<span class="data">
+						<span class="th">Ascent</span>
+						<span>
+						<?php the_field('ascent'); ?> ft
+						</span>/
+						<span>
+							<?
+							$foot_meter_conversion = 0.3;
+							$standard_ascent =  get_field('ascent');
+							$metric_ascent = $standard_ascent * $foot_meter_conversion;
+								print ($metric_ascent);
+							?> m
+						</span>
+
+					</span>
+				<?php endif; ?>
+
+				<?php if(get_field('descent')): ?>
+					<span class="data">
+						<span class="th">Descent</span>
+						<span>
+							<?php the_field('descent'); ?>	ft
+						</span> /
+						<span>
+							<?
+							$foot_meter_conversion = 0.3;
+							$standard_descent =  get_field('descent');
+							$metric_descent = $standard_descent * $foot_meter_conversion;
+								print ($metric_descent);
+							?> m
+						</span>
+					</span>
+				<?php endif; ?>
+
+				<?php if(get_field('location')): ?>
+					<span class="data location">
+						<span class="th"> Location </span>
+						<span> <?php the_field('location'); ?> </span>
+					</span>
+				<?php endif; ?>
+
+				<?php if(get_field('strava_link')): ?>
+					<a class="strava-link" href=" <?php the_field('strava_link'); ?> "> View on Strava </a>
+				<?php endif; ?>
+
+
 			</div>
 		<?php endif; ?>
 
-		<?php if(get_field('distance')): ?>
-			<span class="data">
-				<span class="th">
-					Distance
-				</span>
-				<span>
-					<?php the_field('distance'); ?>	mi /
-				</span>
-				<span>
-				<?
-					$mile_kilometer_conversion = 1.6;
-					$standard_distance =  get_field('distance');
-					$metricDistance = $mile_kilometer_conversion*$standard_distance ;
-					print ($metricDistance);
-				?> km
-				</span>
-			</span>
-		<?php endif; ?>
+		<div class="main-content col col-12 xl-col-9 pad-m">
+			<?php
+				the_content( sprintf(
+					/* translators: %s: Name of current post. */
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'thrilla2-0' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				) );
 
-		<?php if(get_field('duration')): ?>
-			<span class="data">
-				<span class="th">Duration</span>
-				<span><?php the_field('duration'); ?></span>
-			</span>
-		<?php endif; ?>
-
-		<?php if(get_field('ascent')): ?>
-			<span class="data">
-				<span class="th">Ascent</span>
-				<span>
-				<?php the_field('ascent'); ?> ft
-				</span>/
-				<span>
-					<?
-					$foot_meter_conversion = 0.3;
-					$standard_ascent =  get_field('ascent');
-					$metric_ascent = $standard_ascent * $foot_meter_conversion;
-						print ($metric_ascent);
-					?> m
-				</span>
-
-			</span>
-		<?php endif; ?>
-
-		<?php if(get_field('descent')): ?>
-			<span class="data">
-				<span class="th">Descent</span>
-				<span>
-					<?php the_field('descent'); ?>	ft
-				</span> /
-				<span>
-					<?
-					$foot_meter_conversion = 0.3;
-					$standard_descent =  get_field('descent');
-					$metric_descent = $standard_descent * $foot_meter_conversion;
-						print ($metric_descent);
-					?> m
-				</span>
-			</span>
-		<?php endif; ?>
-
-		<?php if(get_field('location')): ?>
-			<span class="data location">
-				<span class="th"> Location </span>
-				<span> <?php the_field('location'); ?> </span>
-			</span>
-		<?php endif; ?>
-
-		<?php if(get_field('strava_link')): ?>
-			<a class="strava-link" href=" <?php the_field('strava_link'); ?> "> View on Strava </a>
-		<?php endif; ?>
-
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'thrilla2-0' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'thrilla2-0' ),
-				'after'  => '</div>',
-			) );
-		?>
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'thrilla2-0' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div>
 
 
 	</div><!-- the-content -->
