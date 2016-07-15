@@ -17,7 +17,7 @@
 			<?php get_template_part('template-parts/module','thumbnail') ?>
 		</div>
 
-		<div class="col col-12 m-col-8 pad-r-l">
+		<div class="col col-12 m-col-8 m-pad-m">
 			<div class="post-meta h5">
 				<span class="post-date caps mar-r-m"> <?php the_time('d.M.y'); ?> </span>
 				<span class="category caps">

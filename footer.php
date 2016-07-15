@@ -27,7 +27,7 @@
 		    <h4> Go far and shred gnar. </h4>
 		</div>
 
-		<div class="col col-12 m-col-3 l-col-4 pad-l white">
+		<div class="col col-12 m-col-3 l-col-4 pad-l white-9">
 			<ul class="list-reset">
 				<h4>Community</h4>
 				<li><a class="link" href="mailto:info@thrillderness.co">info@thrillderness.co</a></li>
@@ -37,12 +37,12 @@
 			</ul>
 		</div>
 
-		<div class="col col-12 m-col-6 l-col-3 pad-l white">
+		<div class="col col-12 m-col-6 l-col-3 pad-l white-9">
 			<h4>Copyright</h4>
 			<p>All content ©2016 Thrillderness and respective contributors. We like to share— <a class="link" href="mailto:yo@thrillderness.co">contact us</a> if you want to use something.</p>
 		</div>
 
-		<div class="col col-12 m-col-6 l-col-3 pad-l white">
+		<div class="col col-12 m-col-6 l-col-3 pad-l white-9">
 			<h4>Colophon</h4>
 			<ul class="list-reset">
 				<li> Running on <a href="http://wordpress.org">Wordpress</a> </li>

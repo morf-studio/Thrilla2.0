@@ -28,7 +28,7 @@
 
 		<?php endif; ?>
 
-		<div class="header-content bg-black-9 cf pad-l">
+		<div class="header-content bg-black-9 cf pad-m m-pad-l">
 			<!-- <div class="vertical-center float-center text-center white"> -->
 
 			<div class="col col-12">
@@ -62,7 +62,7 @@
 
 
 
-	<div class="the-content pad-m bg-white cf">
+	<div class="the-content m-pad-m bg-white cf">
 
 
 			<div class="front-matter col col-12 xl-col-3 pad-m">

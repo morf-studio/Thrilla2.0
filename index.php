@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<section class="col col-12 m-col-8 l-col-9 pad-m">
+<section class="col col-12 m-col-8 l-col-9 m-pad-m">
 	<?php query_posts(array( 'post__in' => get_option( 'sticky_posts' ) ) ); ?>
 
 		<?php if (have_posts()): ?>
@@ -108,4 +108,4 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 </section>
 
-<?php get_footer(); 
+<?php get_footer();

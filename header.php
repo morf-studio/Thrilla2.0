@@ -47,4 +47,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content" role="main pad-m">
+	<div id="content" class="site-content" role="main" class="m-pad-m">
