@@ -22,12 +22,12 @@ get_header(); ?>
 </div>
 			<footer>
 				<!-- pagination -->
-				<div class="pagination flex">
+				<div class="pagination flex flex-row">
 
 					<?php
 					$prev_post = get_previous_post();
 					if (!empty( $prev_post )): ?>
-						<div class="previous-post flex-1">
+						<div class="previous-post float-center">
 							<h6> Previous </h6>
 								<a href="<?php echo get_permalink( $prev_post->ID ); ?>">
 									<?php echo $prev_post->post_title; ?>
@@ -39,7 +39,7 @@ get_header(); ?>
 					<?php
 					$next_post = get_next_post();
 					if (!empty( $next_post )): ?>
-						<div class="next-post flex-1">
+						<div class="next-post float-center">
 							<h6> Next </h6>
 								<a href="<?php echo get_permalink( $next_post->ID ); ?>">
 									<?php echo $next_post->post_title; ?>
