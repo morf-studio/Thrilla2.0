@@ -9,26 +9,25 @@
 
 get_header(); ?>
 
+<div class="float-center max-width-m">
+	<?php
+	while ( have_posts() ) : the_post();
+		get_template_part( 'template-parts/content', 'single' );
 
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', 'single' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-		?>
-
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+	?>
+</div>
 			<footer>
 				<!-- pagination -->
-				<div class="pagination">
+				<div class="pagination flex">
 
 					<?php
 					$prev_post = get_previous_post();
 					if (!empty( $prev_post )): ?>
-						<div class="previous-post">
+						<div class="previous-post flex-1">
 							<h6> Previous </h6>
 								<a href="<?php echo get_permalink( $prev_post->ID ); ?>">
 									<?php echo $prev_post->post_title; ?>
@@ -40,7 +39,7 @@ get_header(); ?>
 					<?php
 					$next_post = get_next_post();
 					if (!empty( $next_post )): ?>
-						<div class="next-post">
+						<div class="next-post flex-1">
 							<h6> Next </h6>
 								<a href="<?php echo get_permalink( $next_post->ID ); ?>">
 									<?php echo $next_post->post_title; ?>

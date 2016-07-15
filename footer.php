@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-
+		<p> ©2016. </p>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

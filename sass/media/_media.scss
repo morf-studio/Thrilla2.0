@@ -25,6 +25,15 @@ img {
 .fit{
   width:100%;
 }
+figure{
+	img{
+		max-height: 90vh;
+	}
+}
+figcaption, .wp-caption-text{
+	font-size:$h5;
+	text-align: center;
+}
 
 /*
  * Media Element

@@ -25,27 +25,26 @@
 <script src="//use.typekit.net/jlv0gcd.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 
-
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-	<?php include_once("icons/thrillderness.svg"); ?>
+<?php include_once("icons/thrillderness.svg"); ?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'thrilla2-0' ); ?></a>
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+	<header id="masthead" class="site-header bg-white pad-m cf" role="banner">
+		<div class="site-branding float-l">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" id="logo">
 				<svg class="icon-thrillderness"> <use xlink:href="#icon-thrillderness"> </use>  </svg>
 			</a>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="main-navigation float-r" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'thrilla2-0' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content max-width-xxxl float-center" role="main">

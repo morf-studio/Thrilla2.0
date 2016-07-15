@@ -29,11 +29,11 @@ textarea {
 strong { font-weight: $bold-font-weight}
 .regular { font-weight: normal }
 .italic  { font-style: italic }
-.caps    {
+.caps, %caps{
 	text-transform: uppercase;
 	&--tracked { letter-spacing: $caps-letter-spacing;}
 }
-.bold {font-weight:bold;}
+.bold, %bold {font-weight:bold;}
 .text-left   { text-align: left }
 .text-center { text-align: center }
 .text-right  { text-align: right }
@@ -70,10 +70,18 @@ small{
   margin-top:0.125rem;
 }
 
-@import
-"headings",
-"lists"
-;
+blockquote{
+	color: #000;
+	font-style: italic;
+	border-left: 4px solid $color__link;
+	padding-left: 1.5rem;
+	font-size: 1em;
+	text-align: left;
+	letter-spacing: .01em;
+	@include breakpoint(l) {
+		font-size: 1.25em;
+	};
+}
 
 @import "headings";
 

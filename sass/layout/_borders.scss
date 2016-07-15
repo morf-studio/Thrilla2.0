@@ -1,11 +1,5 @@
 /* Basscss Border */
 
-$border-width: 2px;
-$border-width-hover: 4px;
-$border-width-thin: 1px;
-$border-width-thick: .5rem;
-$border-radius: .25em;
-
 .border{
   border-style:solid;
   border-width:$border-width;

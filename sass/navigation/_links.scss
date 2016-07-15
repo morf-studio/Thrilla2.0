@@ -17,12 +17,29 @@ a {
 		outline: 0;
 	}
 }
-
 .link-border {
 	text-decoration: none;
 	text-decoration:none;
 	border-bottom-style: solid;
 	border-bottom-width: $border-width;
+}
+.link, %td-none{
+	text-decoration:none;
+}
+.permalink{
+	@extend %td-none;
+	.title{
+		color:$black;
+	}
+	p{
+		color:$color__text-main;
+	}
+}
+.category-link{
+	color:$black70;
+	@extend %td-none;
+	@extend %caps;
+	@extend %bold;
 }
 
 a.button{

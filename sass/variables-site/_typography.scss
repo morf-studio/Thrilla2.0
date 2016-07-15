@@ -1,4 +1,4 @@
-$font__main:  -apple-system, BlinkMacSystemFont,
+$font__main:  'source-sans-pro', -apple-system, BlinkMacSystemFont,
   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif ;
 $font__ui: -apple-system, BlinkMacSystemFont,
@@ -29,7 +29,7 @@ $leading-headline: 1.25;
 $leading-text: 1.5;
 
 // Addtl Style & Weight Variables
-$caps-letter-spacing: .2em;
+$caps-letter-spacing: .1em;
 $bold-font-weight: 600;
 
 h1, .h1 { font-size: $h1 }

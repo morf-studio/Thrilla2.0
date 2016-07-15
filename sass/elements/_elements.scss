@@ -96,6 +96,26 @@ hr {
 
 
 
+//Icons
+
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	height: 1.5em;
+	width:1.5em;
+	fill: currentColor;
+}
+.icon-thrillderness{
+	height:2em;
+	width:12em;
+}
+#icon-shaka-color{
+	.cuffline{
+		fill:$black;
+	}
+	.hand{
+		fill:$white;
+	}
+}
 
 .icon {
 	display: inline-block;
