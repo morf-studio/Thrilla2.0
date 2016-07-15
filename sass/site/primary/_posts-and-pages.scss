@@ -31,6 +31,9 @@
 	}
 }
 .main-content{
+	div{
+		margin-bottom:$space-after;
+	}
 	p {
 		@include breakpoint(m) {
 			font-size:1.125rem;

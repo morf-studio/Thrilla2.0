@@ -18,9 +18,9 @@ get_header(); ?>
 	<?php query_posts(array( 'post__in' => get_option( 'sticky_posts' ) ) ); ?>
 
 		<?php if (have_posts()): ?>
-		<header class="index hero cf">
+		<header class="index hero relative cf mar-b-m">
 			<div class="absolute top-0 left-0 z1 pad-y-s pad-x-m bg-black">
-				<span class="caps h5">Features</span>
+				<span class="caps h5 white-6">Features</span>
 			</div>
 			<div class="slider">
 					<?php while (have_posts()) : the_post(); ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 										<h6>
 											<?php $category = get_the_category();
 										if($category[0]){
-										echo '<a class="category-link link--white border pad-y-s pad-x-m bg-black" href="'.get_category_link($category[0]->term_id ).'">
+										echo '<a class="category-link link--white border pad-y-s pad-x-m" href="'.get_category_link($category[0]->term_id ).'">
 
 											'.$category[0]->cat_name.'
 										</a>';
@@ -108,4 +108,4 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 </section>
 
-<?php get_footer(); ?>
+<?php get_footer(); 

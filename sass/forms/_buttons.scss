@@ -2,8 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: none;
-	//border-color: $color__border-button;
+	border: 2px solid;
+	border-color: $black;
 	//border-radius: 3px;
 	background: $black;
 	//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
@@ -15,12 +15,15 @@ input[type="submit"] {
 	//text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
 	&:hover {
-		//border-color: $color__border-button-hover;
+		border-color: $color__link-hover;
+		background-color:$color__link-hover;
 		//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 	}
 
 	&:active,
 	&:focus {
+		border-color: $color__link-hover;
+		background-color:$color__link-hover;
 		//border-color: $color__border-button-focus;
 		//box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 	}

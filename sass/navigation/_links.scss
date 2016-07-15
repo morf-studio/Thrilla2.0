@@ -35,7 +35,6 @@ a {
 	}
 }
 .category-link{
-	color:$black70;
 	@extend %td-none;
 	@extend %caps;
 	@extend %bold;
@@ -59,9 +58,9 @@ a.button{
 .link, %td-none{
 	text-decoration:none;
 	&--white{
-		color:$white80;
+		color:$white;
 		&:visited{
-			color:$white80;
+			color:$white;
 		}
 		&:hover,
 		&:focus,
@@ -70,14 +69,25 @@ a.button{
 		}
 	}
 	&--black{
-		color:$black80;
+		color:$black;
 		&:visited{
-			color:$black80;
+			color:$black;
 		}
 		&:hover,
 		&:focus,
 		&:active {
 			color: $black;
+		}
+	}
+	&--on-dark{
+		color:$color__link-on-dark;
+		&:visited{
+			color:$color__link-on-dark-visited;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__link-on-dark-hover;
 		}
 	}
 }

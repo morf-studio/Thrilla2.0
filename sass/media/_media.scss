@@ -31,14 +31,16 @@ img {
 figure{
 	max-width:100%;
 	// Pulled out of Normalize - Must include all values
-	margin:$space-before auto $space-after;
+	margin:0 auto $space-after;
 	img{
-		max-height: 90vh;
+		max-height: 100vh;
 		display:block;
 		margin-left:auto;
 		margin-right:auto;
 	}
 }
+
+
 figcaption, .wp-caption-text{
 	font-size:$h5;
 	text-align: center;
@@ -77,6 +79,12 @@ figcaption {
 	height: 100%;
 }
 
+.bg-cover{
+	background-size:cover;
+}
+.bg-contain{
+	background-size:contain;
+}
 
 /*--------------------------------------------------------------
 ## Captions

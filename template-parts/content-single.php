@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="hero relative bg-black">
+	<header class="hero relative bg-white">
 		<?php if ( has_post_thumbnail() ): ?>
 
 				<?php
@@ -22,46 +22,53 @@
 
 				<div class="featured-image-hero">
 				<div class="featured-image-layout">
-						<img src="<?php echo $featured_image[0]; ?>" alt="<?php echo $alt_text; ?>"	>
+						<img class="width-100" src="<?php echo $featured_image[0]; ?>" alt="<?php echo $alt_text; ?>"	>
 				</div>
 			</div>
 
 		<?php endif; ?>
 
-		<div class="header-content absolute top-0 left-0 bottom-0 right-0 pad-l text-center">
-			<?php
-			$category = get_the_category();
-			if($category[0]){
-			echo '<a class="category-link link-white" href="'.get_category_link($category[0]->term_id ).'">
+		<div class="header-content bg-black-9 cf pad-l">
+			<!-- <div class="vertical-center float-center text-center white"> -->
 
-				'.$category[0]->cat_name.'
-			</a>';
-			}
-			?>
-			<h1 class="title white"><?php the_title(); // Display the title of the post ?></h1>
+			<div class="col col-12">
+				<h6>
+					<?php
+				$category = get_the_category();
+				if($category[0]){
+				echo '<a class="category-link link--on-dark" href="'.get_category_link($category[0]->term_id ).'">
+					'.$category[0]->cat_name.'
+				</a>';
+				}
+				?>
+				</h6>
+				<h1 class="title white mar-0"><?php the_title(); // Display the title of the post ?></h1>
 
-			<?php if(get_field('the_subtitle')): ?>
-				<h2 class="subtitle white"> <?php the_field('the_subtitle'); ?>	</h2>
-			<?php endif; ?>
-
-			<h6 id="date" class=""> <?php the_time('d.M.Y') ?> </h6>
-
+				<?php if(get_field('the_subtitle')): ?>
+					<p class="h2 subtitle mar-b-s white-9"> <?php the_field('the_subtitle'); ?>	</p>
+				<?php endif; ?>
+			</div>
+			<!-- </div> -->
+			<div class="col col-12">
+				<span id="date" class="caps h5 white-6"> <?php the_time('d.M.Y') ?> </span>
+			</div>
 		</div>
 
-		<nav id="post-header-tags" class="tags">
-			<?php echo get_the_tag_list('#', '#'); // Display the tags this post has, as links separated by spaces and hashtags ?>
-		</nav>
+
 
 	</header>
 
 
 
+
+
 	<div class="the-content pad-m bg-white cf">
 
-		<?php if(get_field('front_matter')): ?>
 
 			<div class="front-matter col col-12 xl-col-3 pad-m">
-				<?php the_field('front_matter'); ?>
+				<?php if(get_field('front_matter')): ?>
+					<?php the_field('front_matter'); ?>
+				<?php endif; ?>
 
 				<?php if(get_field('distance')): ?>
 					<span class="data">
@@ -135,9 +142,12 @@
 					<a class="strava-link" href=" <?php the_field('strava_link'); ?> "> View on Strava </a>
 				<?php endif; ?>
 
+				<nav id="post-header-tags" class="tags caps h6">
+					<?php echo get_the_tag_list(); // Display the tags this post has, as links separated by spaces and hashtags ?>
+				</nav>
 
 			</div>
-		<?php endif; ?>
+
 
 		<div class="main-content col col-12 xl-col-9 pad-m">
 			<?php

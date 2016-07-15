@@ -114,7 +114,9 @@
 	a{
 		display:inline-block;
 		padding:$space-s $space-m;
-		margin:$space-s;
+		margin-right:$space-s;
+		margin-bottom:$space-s;
 		@extend %td-none;
+		border:2px solid;
 	}
 }

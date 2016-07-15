@@ -1,5 +1,7 @@
 .widget {
 	margin: 0 0 $space-after;
+	border-bottom: 2px solid;
+  padding-bottom: $space-after;
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;

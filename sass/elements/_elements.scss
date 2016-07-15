@@ -76,6 +76,10 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+#page {
+	background: $color__background-page; /* Fallback for when there is no custom background color defined. */
+}
+
 blockquote, q {
 	quotes: "" "";
 
@@ -100,13 +104,17 @@ hr {
 
 [class^="icon-"], [class*=" icon-"] {
 	display: inline-block;
-	height: 1.5em;
-	width:1.5em;
+	height: 1.5rem;
+	width:1.5rem;
 	fill: currentColor;
 }
 .icon-thrillderness{
 	height:2em;
 	width:12em;
+}
+.icon-shaka{
+  height:3em;
+  width:3em;
 }
 #icon-shaka-color{
 	.cuffline{

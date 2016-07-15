@@ -1,0 +1,51 @@
+
+//Shaka Animation Definitions
+@keyframes shakaBrah{
+			0%{transform:rotate(0deg);}
+		   35%{transform:rotate(-8deg);}
+		   50%{transform:rotate(6deg);}
+		   75%{transform:rotate(-4deg);}
+		   90%{transform:rotate(2deg);}
+		  100%{transform:rotate(0deg);}}
+	@-ms-keyframes shakaBrah{
+		    0%{-ms-transform:rotate(0deg);}
+		   35%{-ms-transform:rotate(-8deg);}
+		   50%{-ms-transform:rotate(6deg);}
+		   75%{-ms-transform:rotate(-4deg);}
+		   90%{-ms-transform:rotate(2deg);}
+		  100%{-ms-transform:rotate(0deg);}}
+   @-moz-keyframes shakaBrah{
+   	  0%{-moz-transform:rotate(0deg);}
+		   35%{-moz-transform:rotate(-8deg);}
+		   50%{-moz-transform:rotate(6deg);}
+		   75%{-moz-transform:rotate(-4deg);}
+		   90%{-moz-transform:rotate(2deg);}
+		  100%{-moz-transform:rotate(0deg);}}
+@-webkit-keyframes shakaBrah{
+			0%{-webkit-transform:rotate(0deg);}
+		   35%{-webkit-transform:rotate(-8deg);}
+		   50%{-webkit-transform:rotate(6deg);}
+		   75%{-webkit-transform:rotate(-4deg);}
+		   90%{-webkit-transform:rotate(2deg);}
+		  100%{-webkit-transform:rotate(0deg);}}
+
+
+a.shaka-button-container{
+  display:block;
+  fill:normal;
+  .shaka{
+    font-size:2em;
+    transform-style: preserve-3d;
+      .icon-shaka{
+        margin-left:.25em;
+      }
+  }
+  &:hover{
+    .shaka{
+          animation:shakaBrah .4s;
+      -ms-animation:shakaBrah .4s;
+       -moz-animation:shakaBrah .4s;
+    -webkit-animation:shakaBrah .4s;
+    }
+  }
+}
