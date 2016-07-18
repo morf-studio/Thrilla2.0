@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-		<div class="col col-12 m-col-8 l-col-9 pad-m">
+		<div class="col col-12 m-col-8 l-col-9 m-pad-m">
 			<?php
 			while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/content', 'single' );

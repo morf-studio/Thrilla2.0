@@ -34,7 +34,7 @@
 
 <div id="page" class="site max-width-xxxl float-center">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'thrilla2-0' ); ?></a>
-	<header id="masthead" class="site-header pad-y-m cf" role="banner">
+	<header id="masthead" class="site-header pad-y-m m-pad-m cf" role="banner">
 		<div class="site-branding float-l">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" id="logo" class="black">
 				<svg class="icon-thrillderness"> <use xlink:href="#icon-thrillderness"> </use>  </svg>
@@ -47,4 +47,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content" role="main" class="m-pad-m">
+	<div id="content" class="site-content m-pad-m" role="main">

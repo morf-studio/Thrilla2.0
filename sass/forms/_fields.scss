@@ -14,6 +14,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	transition: all .2s;
 	color: $black;
 	border: 2px solid;
 	border-color:$black;

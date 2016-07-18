@@ -10,11 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+	<header class="entry-header col col-12 m-col-4 l-col-3">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content col col-12 m-col-8 l-col-9 max-width-l bg-white pad-m m-pad-l">
 		<?php
 			the_content();
 

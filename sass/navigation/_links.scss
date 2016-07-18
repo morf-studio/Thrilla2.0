@@ -38,6 +38,8 @@ a {
 	@extend %td-none;
 	@extend %caps;
 	@extend %bold;
+	display:inline-block;
+	//background-color:$color__link;
 }
 
 
