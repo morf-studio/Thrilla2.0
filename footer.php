@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer bg-black-9" role="contentinfo">
 
-		<div class="col col-12 m-col-3 l-col-2 pad-m bg-primary text-center">
+		<div class="col col-12 m-col-3 l-col-2 pad-m bg-gradient text-center">
 				<a class="shaka-button-container link--black" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<div class="shaka">
 						<svg class="icon-shaka"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-shaka-color"> </use>  </svg>

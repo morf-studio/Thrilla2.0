@@ -76,3 +76,4 @@ $white90:rgba(255,255,255,0.9);
 .bg-black-8{background-color:$black80;}
 .bg-black-9{background-color:$black90;}
 .bg-primary{background-color:$color__link;}
+.bg-gradient{background:linear-gradient( 45deg, $color__link, $color__link-on-dark );}
