@@ -35,6 +35,7 @@
 		margin-bottom:$space-after;
 	}
 	p {
+		font-family:$font__serif;
 		@include breakpoint(m) {
 			font-size:1.125rem;
 		}

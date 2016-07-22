@@ -2,37 +2,37 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	transition: all .2s;
+	transition: all 0.2s;
 	border: 2px solid;
-	border-color: $black;
+	border-color: $color__border-input;
 	//border-radius: 3px;
-	background: $black;
+	background: $color__border-input;
 	//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: $white90;
+	color: $color__button;
 	font-size:$h5;
 	@extend %caps;
 	line-height: 1.5;
 	padding: .5rem 1rem;
-	//text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-
+	outline:none;
 	&:hover {
-		border-color: $color__link-hover;
-		background-color:$color__link-hover;
+		color: $color__button-hover;
+		border-color: $color__border-button-hover;
+		background-color:$color__background-button-hover;
 		//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 	}
 
 	&:active,
 	&:focus {
-		border-color: $color__link-hover;
-		background-color:$color__link-hover;
-		//border-color: $color__border-button-focus;
+		color: $color__button-focus;
+		background-color:$color__background-button-focus;
+
 		//box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 	}
 }
 
 button{
 	transition: all .2s;
-  background-color:none;
+  background-color:$color__background-button;
   border:none;
   font-weight:600;
   font-size:$h5;

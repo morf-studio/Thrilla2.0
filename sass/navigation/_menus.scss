@@ -60,6 +60,9 @@
 		text-decoration: none;
 		padding:$space-m $space-m;
 		color:$black;
+		&:hover{
+			color:$color__link;
+		}
 	}
 
 	.current_page_item > a,

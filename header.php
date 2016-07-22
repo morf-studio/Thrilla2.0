@@ -37,17 +37,12 @@
 	<header id="masthead" class="site-header pad-y-m m-pad-m cf" role="banner">
 		<div class="site-branding float-l">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" id="logo" class="black">
-				<svg class="icon-thrillderness"> <use xlink:href="#icon-thrillderness"> </use>
+				<svg class="icon-thrillderness bg-gradient--icon-thrill"> <use xlink:href="#icon-thrillderness"> </use>
 					<defs>
 						<linearGradient id="Gradient1" x1="0" x2="100%" y1="0" y2="0" gradientUnits="userSpaceOnUse" >
 							<stop class="stop1" offset="0%"/>
 							<stop class="stop2" offset="100%"/>
 						</linearGradient>
-						<style type="text/css"><![CDATA[
-						#icon-thrillderness { fill: url(#Gradient1); }
-						.stop1 { stop-color: #105633; }
-						.stop2 { stop-color: #24c26b; }
-						]]></style>
 					</defs>
 				</svg>
 			</a>

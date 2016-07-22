@@ -8,7 +8,10 @@ textarea {
 	@include font-size(1);
 	line-height: $font__line-height-body;
 }
-
+::selection{
+	color:$white;
+	background-color:$color__link;
+}
 .measure{
   max-width:$measure-width;
 	&--narrow{
@@ -72,6 +75,7 @@ small{
 
 blockquote{
 	color: #000;
+	font-family: $font__serif;
 	font-style: italic;
 	border-left: 4px solid $color__link;
 	padding-left: 1.5rem;
@@ -81,6 +85,13 @@ blockquote{
 	@include breakpoint(l) {
 		font-size: 1.25em;
 	};
+}
+blockquote, q {
+	quotes: "" "";
+	&:before,
+	&:after {
+		content: "";
+	}
 }
 
 @import "headings";

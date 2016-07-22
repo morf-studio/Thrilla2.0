@@ -37,7 +37,9 @@
 				<h2 class="title mar-t-l">
 					<?php the_title(); // Show the title of the posts as a link ?>
 				</h2>
-				<?php the_excerpt(); ?>
+				<div class="font__serif">
+					<?php the_excerpt(); ?>
+				</div>
 			</a>
 			<a class="link-border" href="<?php the_permalink(); ?>">
 				<p class="h5 bold caps--tracked"> READ MORE &rarr; </p>

@@ -14,20 +14,19 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	transition: all .2s;
-	color: $black;
+	transition: all 0.1s ease-in-out;
+	color: $color__text-input;
 	border: 2px solid;
-	border-color:$black;
-	//border-top:none;
-	//border-left:none;
-	//border-right:none;
-	//border-radius: 3px;
-	//padding: 3px;
+	border-color:$color__border-input;
+	background-color:$color__background-input;
 	padding:.5rem;
 	font-size:$h5;
+	outline: none;
+
 	&:focus {
 		color: $color__text-input-focus;
-		border-color: $color__link-hover;
+		//border-color: $color__link;
+		box-shadow: 0 0 4px 2px $color__border-input-focus;
 	}
 }
 
